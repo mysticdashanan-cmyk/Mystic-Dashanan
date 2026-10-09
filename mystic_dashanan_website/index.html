@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080705">
+  <meta name="description" content="Mystic Dashanan — Mystery, Power, Legacy. Explore our world of creativity, knowledge and timeless stories.">
+  <title>Mystic Dashanan | Mystery • Power • Legacy</title>
+  <style>
+    :root{--bg:#080705;--panel:#12100b;--gold:#d7ad50;--gold2:#f6d98b;--text:#f5f0e5;--muted:#c5bda9;--line:#70531e}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Georgia,"Times New Roman",serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1160px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(8,7,5,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{display:flex;align-items:center;gap:12px;color:var(--gold2);font-size:clamp(1.1rem,2vw,1.55rem);letter-spacing:.08em;text-transform:uppercase}
+    .brand-mark{width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-size:1.35rem;box-shadow:0 0 18px #d7ad5025}
+    nav{display:flex;gap:22px;flex-wrap:wrap;font-size:.93rem}
+    nav a{color:#e7dfce} nav a:hover{color:var(--gold2)}
+    .hero{position:relative;min-height:570px;display:flex;align-items:center;overflow:hidden;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 75% 45%,#6d461d 0%,#21170c 28%,#080705 66%)}
+    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#080705 0%,rgba(8,7,5,.96) 28%,rgba(8,7,5,.35) 72%,rgba(8,7,5,.35)),url("assets/mystic-dashanan-hero.png") center 31%/cover no-repeat;opacity:.43}
+    .hero-content{position:relative;padding:85px 0;max-width:620px}
+    .eyebrow{color:var(--gold2);letter-spacing:.32em;text-transform:uppercase;font-size:.76rem;font-weight:bold}
+    h1{font-size:clamp(2.6rem,6vw,5rem);line-height:1.03;margin:.35em 0;color:var(--gold2);text-transform:uppercase}
+    h2{color:var(--gold2);font-size:clamp(1.7rem,3vw,2.5rem);line-height:1.15;margin:.25em 0 .6em}
+    .lead{font-size:1.22rem;color:#fff}
+    p{color:var(--muted)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid var(--gold);padding:12px 22px;margin-top:14px;color:var(--gold2);text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;transition:.2s}
+    .btn:hover{background:var(--gold);color:#100c04}
+    section{padding:76px 0;border-bottom:1px solid #332713}
+    .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:42px;align-items:center}
+    .art-panel{min-height:340px;border:1px solid var(--line);background:linear-gradient(145deg,#38260e,#0b0906 58%,#6c491b);display:grid;place-items:center;position:relative;overflow:hidden}
+    .art-panel:before{content:"ॐ";font-size:11rem;color:#d7ad50;opacity:.2;text-shadow:0 0 50px #e9b64d}
+    .art-panel:after{content:"WISDOM • STRENGTH • LEGACY";position:absolute;bottom:20px;color:var(--gold2);letter-spacing:.18em;font-size:.7rem}
+    .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
+    .pillar{border-top:1px solid var(--gold);padding:15px 8px;color:var(--gold2);text-align:center;font-size:.9rem}
+    .pillar span{display:block;font-size:1.5rem;margin-bottom:6px}
+    .gallery-layout{display:grid;grid-template-columns:1.5fr .8fr;gap:34px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .card{border:1px solid #55401d;background:var(--panel);min-height:180px;padding:22px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+    .card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 20%,#8e6428aa,transparent 42%),linear-gradient(140deg,transparent,#000 85%);opacity:.75}
+    .card>*{position:relative}.card .symbol{font-size:2.3rem;color:var(--gold2)}.card h3{margin:6px 0;color:var(--gold2)}
+    .social{border-left:1px solid #332713;padding-left:30px}
+    .social-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+    .social-link{border:1px solid var(--line);padding:12px 16px;color:var(--gold2)}
+    .social-link:hover{background:#21170b}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+    .contact-box{border:1px solid var(--line);padding:26px;background:linear-gradient(135deg,#171108,#090806)}
+    footer{padding:30px 0;color:#9c927d;font-size:.82rem}
+    .footer-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .gold{color:var(--gold2)}
+    @media(max-width:760px){.nav{align-items:flex-start;padding:15px 0;flex-direction:column}.nav nav{gap:12px 18px}.hero{min-height:510px}.hero:before{background-position:60% center;opacity:.32}.about-grid,.gallery-layout,.contact-grid{grid-template-columns:1fr}.pillars{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}.card{min-height:145px}.social{border-left:0;border-top:1px solid #332713;padding:25px 0 0}.art-panel{min-height:230px}section{padding:55px 0}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Mystic Dashanan home"><span class="brand-mark">✦</span><span>Mystic Dashanan</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#youtube">YouTube</a><a href="#instagram">Instagram</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div class="wrap"><div class="hero-content">
+      <div class="eyebrow">Welcome to</div>
+      <h1>Mystic<br>Dashanan</h1>
+      <div class="lead">More than a brand — <span class="gold">it's a mindset.</span></div>
+      <p>Mystery, power and legacy come together in a world inspired by timeless stories, bold ideas and fearless creativity.</p>
+      <a class="btn" href="#about">Explore our world <span>→</span></a>
+    </div></div>
+  </section>
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="art-panel" role="img" aria-label="Abstract golden symbol on a dark background"></div>
+      <div>
+        <div class="eyebrow">About us</div><h2>The story of<br>Mystic Dashanan</h2>
+        <p>Mystic Dashanan is a creative brand inspired by the ideas of knowledge, strength, imagination and legacy. We bring a bold, mystical aesthetic to stories and visual expression.</p>
+        <p>Our goal is to inspire people to think deeper, create fearlessly and discover the power of their own ideas.</p>
+        <div class="pillars">
+          <div class="pillar"><span>▤</span>Knowledge<br>Beyond Limits</div>
+          <div class="pillar"><span>♛</span>Strength<br>in Mindset</div>
+          <div class="pillar"><span>✧</span>Creativity<br>in Every Form</div>
+          <div class="pillar"><span>∞</span>Legacy<br>Forever</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="gallery">
+    <div class="wrap gallery-layout">
+      <div>
+        <div class="eyebrow">Discover</div><h2>Explore the world</h2>
+        <div class="cards">
+          <article class="card"><div class="symbol">♜</div><h3>Stories & Ideas</h3><p>Discover the inspiration behind the brand.</p></article>
+          <article class="card"><div class="symbol">✦</div><h3>Creative Works</h3><p>A dark, golden world of imagination.</p></article>
+          <article class="card"><div class="symbol">◈</div><h3>Art & Design</h3><p>Visuals shaped by mystery and legacy.</p></article>
+        </div>
+      </div>
+      <aside class="social">
+        <div class="eyebrow">Follow us</div><h2>Stay connected</h2>
+        <p>Follow Mystic Dashanan for new content, creative updates and more.</p>
+        <div class="social-links">
+          <a class="social-link" id="youtube" href="https://youtube.com/@mysticdashanan" target="_blank" rel="noopener noreferrer">▶ YouTube</a>
+          <a class="social-link" id="instagram" href="https://www.instagram.com/mystic.dashanan/" target="_blank" rel="noopener noreferrer">◎ Instagram</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div><div class="eyebrow">Get in touch</div><h2>Let's connect</h2><p>For collaborations, questions or brand enquiries, reach out through your preferred social platform.</p></div>
+      <div class="contact-box">
+        <p><span class="gold">Instagram</span><br><a href="https://www.instagram.com/mystic.dashanan/" target="_blank" rel="noopener noreferrer">@mystic.dashanan ↗</a></p>
+        <p><span class="gold">YouTube</span><br><a href="https://youtube.com/@mysticdashanan" target="_blank" rel="noopener noreferrer">@mysticdashanan ↗</a></p>
+        <p class="gold">Mystery • Power • Legacy</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap footer-row"><span>© <span id="year">2026</span> Mystic Dashanan. All rights reserved.</span><span>Made with <span class="gold">✦</span> for the dreamers.</span><a href="#home">Back to top ↑</a></div></footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
